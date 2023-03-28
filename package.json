@@ -6,11 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write src/**/*.{js,html,css}",
-    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "prepare": "husky install"
   },
   "author": "andron13",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prettier": "2.8.7"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
