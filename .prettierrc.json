@@ -1,7 +1,8 @@
 {
-  "trailingComma": "es5",
-  "semi": false,
+  "trailingComma": "all",
+  "semi": true,
   "singleQuote": true,
+  "bracketSpacing": true,
   "options": {
     "editorconfig": true
   }

@@ -1,22 +1,22 @@
-const paragraph = document.querySelector('p')
+const paragraph = document.querySelector('p');
 
-paragraph.style.color = 'red'
+paragraph.style.color = 'red';
 
 // Don't forget to change to true before deploy
 
-const PRODUCTION = true
+const PRODUCTION = true;
 
 // Banner Variables
-const startAnimationDelay = 0.1 // sec
-const initScrollDelay = 1.5 // sec
+const startAnimationDelay = 0.1; // sec
+const initScrollDelay = 1.5; // sec
 
-RESOLUTIONS
+RESOLUTIONS;
 const tlParams = {
   // Put your debug parameters here
   // onStart: console.log('play'),
   onComplete: initScroll,
-}
-const customScroll = OverlayScrollbars(document.getElementById('isi'), {})
+};
+const customScroll = OverlayScrollbars(document.getElementById('isi'), {});
 
 window.onload = () => {
   gsap
@@ -37,7 +37,7 @@ window.onload = () => {
     .to(
       '#frame1 .accompany, #frame1 .copy, #frame1 .line',
       { opacity: 0, ease: 'none', duration: 0.5 },
-      'startFrame2-=.5'
+      'startFrame2-=.5',
     )
 
     // Frame 2
@@ -54,54 +54,54 @@ window.onload = () => {
 
     // Frame 4
     .to('#frame4', { opacity: 1, ease: 'none', duration: 0.5 }, 'startFrame4')
-    .to('#frame4 .content', { bottom: 0, ease: 'power4.out', duration: 1 }, 'startFrame4+=.5')
-}
+    .to('#frame4 .content', { bottom: 0, ease: 'power4.out', duration: 1 }, 'startFrame4+=.5');
+};
 
 // init scroll after animation
 function initScroll() {
   setTimeout(() => {
-    customScroll.scroll({ y: '0%' })
-    customScroll.scroll([0, '100%'], 103000, { y: 'linear' })
-  }, initScrollDelay * 1000)
+    customScroll.scroll({ y: '0%' });
+    customScroll.scroll([0, '100%'], 103000, { y: 'linear' });
+  }, initScrollDelay * 1000);
 }
 
 // stop auto scroll handler
-const scrollHolder = document.getElementById('isi')
+const scrollHolder = document.getElementById('isi');
 scrollHolder.addEventListener('wheel', function () {
-  customScroll.scrollStop()
-})
+  customScroll.scrollStop();
+});
 
 scrollHolder.addEventListener(
   'mousedown',
   (e) => {
     if (e.target.matches('.os-scrollbar-handle')) {
-      customScroll.scrollStop()
+      customScroll.scrollStop();
     }
   },
-  true
-)
+  true,
+);
 
 // exit links for DoubleClick
 document.getElementById('clickarea').addEventListener('click', function () {
-  Enabler.exit('full_exit')
-})
+  Enabler.exit('full_exit');
+});
 
 document.getElementById('link_button').addEventListener('click', function () {
-  Enabler.exit('discover_link')
-})
+  Enabler.exit('discover_link');
+});
 
 document.getElementById('logo_otsuka').addEventListener('click', function () {
-  Enabler.exit('otsuka_link')
-})
+  Enabler.exit('otsuka_link');
+});
 
 document.getElementById('pre_isi_link_full_pi').addEventListener('click', function () {
-  Enabler.exit('exit_to_full_PI')
-})
+  Enabler.exit('exit_to_full_PI');
+});
 
 document.getElementById('link_isi_medwatch').addEventListener('click', function () {
-  Enabler.exit('exit_isi_medwatch')
-})
+  Enabler.exit('exit_isi_medwatch');
+});
 
 document.getElementById('link_isi_full_pi').addEventListener('click', function () {
-  Enabler.exit('exit_to_full_PI')
-})
+  Enabler.exit('exit_to_full_PI');
+});
