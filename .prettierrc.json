@@ -2,9 +2,6 @@
   "trailingComma": "es5",
   "semi": false,
   "singleQuote": true,
-  "defaultOptions": {
-    "tabWidth": 2
-  },
   "options": {
     "editorconfig": true
   }
