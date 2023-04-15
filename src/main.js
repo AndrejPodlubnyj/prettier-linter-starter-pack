@@ -16,6 +16,7 @@ const tlParams = {
   // onStart: console.log('play'),
   onComplete: initScroll,
 };
+
 const customScroll = OverlayScrollbars(document.getElementById('isi'), {});
 
 window.onload = () => {
